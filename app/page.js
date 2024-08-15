@@ -164,9 +164,157 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center ">
-      <h1 className="font-bold text-2xl uppercase text-center">
-        Maschain API Workshop Demo
-      </h1>
+      
+
+      {/* //==========================Health Dashboard========================== */}
+
+      <div className="container mx-auto mt-8 p-4 bg-white shadow-lg rounded-md">
+      <h2 className="text-2xl font-bold mb-6">Dashboard Overview</h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        {/* Scheduling Section */}
+        <div className="col-span-1">
+          <h3 className="text-lg font-semibold mb-4">Scheduling</h3>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Appointments</p>
+            <p className="text-xl font-bold">12</p>
+            <p className="text-xs text-gray-500">Last Updated: 1 hour ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md">
+            <p className="text-sm font-medium">Roster</p>
+            <p className="text-xl font-bold">2</p>
+            <p className="text-xs text-gray-500">Last Updated: 2 weeks ago</p>
+          </div>
+        </div>
+
+        {/* Records Section */}
+        <div className="col-span-1">
+          <h3 className="text-lg font-semibold mb-4">Records</h3>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Patients</p>
+            <p className="text-xl font-bold">128</p>
+            <p className="text-xs text-gray-500">Last Updated: 2 min ago</p>
+          </div>
+        </div>
+
+        {/* Financial Section */}
+        <div className="col-span-1">
+          <h3 className="text-lg font-semibold mb-4">Financial</h3>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Billing</p>
+            <p className="text-xl font-bold">24</p>
+            <p className="text-xs text-gray-500">Last Updated: 2 days ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Invoices</p>
+            <p className="text-xl font-bold">36</p>
+            <p className="text-xs text-gray-500">Last Updated: 1 week ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md">
+            <p className="text-sm font-medium">Insurance</p>
+            <p className="text-xl font-bold">87</p>
+            <p className="text-xs text-gray-500">Last Updated: 3 hours ago</p>
+          </div>
+        </div>
+
+        {/* Contacts Section */}
+        <div className="col-span-1">
+          <h3 className="text-lg font-semibold mb-4">Contacts</h3>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Staff</p>
+            <p className="text-xl font-bold">62</p>
+            <p className="text-xs text-gray-500">Last Updated: 2 days ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium">Pharmacy</p>
+            <p className="text-xl font-bold">25</p>
+            <p className="text-xs text-gray-500">Last Updated: 4 days ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md">
+            <p className="text-sm font-medium">Hospital</p>
+            <p className="text-xl font-bold">17</p>
+            <p className="text-xs text-gray-500">Last Updated: 3 hours ago</p>
+          </div>
+        </div>
+        
+      </div>
+
+      {/* Notifications Section */}
+
+      <div className="col-span-1">
+          <h3 className="text-lg font-semibold mb-4">Notifications</h3>
+          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium text-white">New patient data received</p>
+            <p className="text-sm text-white">Sandra Cook - 09:45, 22 Jan 2018</p>
+            <button className="text-blue-500 text-sm mt-1">View Details</button>
+          </div>
+          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-sm font-medium text-white">New patient data received</p>
+            <p className="text-sm text-white">Sandra Cook - 09:45, 22 Jan 2018</p>
+            <button className="text-blue-500 text-sm mt-1">View Details</button>
+          </div>
+          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md">
+            <p className="text-bg font-medium text-white">Patient revoking access</p><br></br>
+            <div style={{display: 'flex' }}>
+              <div>
+            <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Anon" alt="Annoymous Patient" className="w-10 h-10 rounded-full mr-4"/>
+            </div>
+            <div>
+                <p className="text-sm text-white">Herman Patterson - 09:30, 18 Dec 2017</p>
+                <button className="text-blue-500 text-sm mt-1">View Details</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+    </div>
+
+    {/* //======================================== Patient Database UI*/}
+      <div className="container mx-auto mt-8 p-4 bg-white shadow-lg rounded-md">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-bold">Sandra Cook</h2>
+        <button className="border rounded-md py-2 px-4 hover:bg-blue-500 hover:text-white transition-all duration-300">
+          Save & Create
+        </button>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {/* Left Section */}
+        <div className="col-span-1 lg:col-span-2">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold">Today's Consultation</h3>
+            <div className="p-4 bg-gray-100 rounded-md">
+              <p><strong>Complaint/Symptoms:</strong> New patient, Diabetes</p>
+              <p><strong>New Diagnosis:</strong> 250 Diabetes / Diabetes mellitus</p>
+              <p><strong>Referral Notes:</strong> N/A</p>
+              <p><strong>Current Medications:</strong> N/A</p>
+              <p><strong>Prescribe Medication:</strong> N/A</p>
+              <p><strong>Patient Documents:</strong> N/A</p>
+            </div>
+          </div>
+        </div>
+        {/* Right Section */}
+        <div className="col-span-1">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold">Medical History</h3>
+            <div className="p-4 bg-gray-100 rounded-md">
+              <p><strong>Prescription:</strong> Dr. Levine, Family Care Clinic</p>
+              <p><strong>GP Visit:</strong> Dr. Levine, Family Care Clinic</p>
+              <p><strong>Discharge Letter:</strong> Saint Luke's Hospital</p>
+              <p><strong>Surgery Documentation:</strong> Saint Luke's Hospital</p>
+            </div>
+          </div>
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold">Prescription</h3>
+            <div className="p-4 bg-gray-100 rounded-md">
+              <p><strong>Referee:</strong> Dr. Levine, Family Care Clinic</p>
+              <p><strong>Date & Time:</strong> 09/11/16, 11.26 am</p>
+              <p><strong>Practice Address:</strong> 44 Rath Overpass Suite 997</p>
+              <p><strong>Practice Details:</strong> Pain Killer - Paracetamol 1,500 mg IV q12 hours x 3 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* //========================================================================== */}
       <p className="text-sm text-gray-500 lowercase font-normal mt-4">
         {walletAddress ? (
           <>
