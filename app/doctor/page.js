@@ -180,6 +180,51 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center ">   
     {/* // shadow-lg rounded-md */}
+    <nav className="bg-white shadow-md w-full">
+            <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+                {/* Logo */}
+                <div className="flex items-center">
+                    <div className="rounded-full bg-purple-500 h-8 w-8 flex items-center justify-center mr-2">
+                        <span className="text-white text-lg font-bold">M</span>
+                    </div>
+                    <span className="text-xl font-semibold">Medata Doctor</span>
+                </div>
+
+                {/* Navigation Links */}
+                <ul className="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    
+                    <Link href="/">
+                      <li>Dashboard</li>
+                    </Link>
+
+                    <Link href="/doctor">
+                      <li>Patient Log</li>
+                    </Link>
+                    
+                    <Link href="/login">
+                      <li>Login As Patient</li>
+                    </Link>
+                </ul>
+
+                {/* Right Section */}
+                <div className="flex items-center space-x-4">
+                    <div className="relative">
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="border border-gray-300 rounded-full py-1 px-4 text-sm focus:outline-none"
+                        />
+                    </div>
+                    <div className="flex items-center">
+                      <Link href="/login">
+                        <span className="text-sm font-medium">Log Out</span>
+                      </Link>
+                    </div>
+                    <div className="md:hidden">
+                    </div>
+                </div>
+            </div>
+        </nav>  
     <div className="container mt-10 pl-10 pr-10 bg-white">
       {/* Personal Information Section */}  
       <div style={{borderStyle: 'solid', borderWidth: '1px', borderColor: 'gray'}} className="mb-6 rounded-md">
@@ -548,11 +593,17 @@ export default function Home() {
                             
             </select>
 
+            <label className="block mb-2" htmlFor="details"><strong>New Diagnosis:</strong></label>
+            <textarea id="details" className="p-2 border rounded-md w-full mb-4" placeholder="Enter details to be added"></textarea>            
+
             <label className="block mb-2" htmlFor="details"><strong>Diagnosis Details:</strong></label>
             <textarea id="details" className="p-2 border rounded-md w-full mb-4" placeholder="Enter details to be added"></textarea>
 
             <label className="block mb-2" htmlFor="details"><strong>Medification Prescription:</strong></label>
             <textarea id="details" className="p-2 border rounded-md w-full mb-4" placeholder="Enter medification Prescription"></textarea>
+
+            <label for="birthday"><strong>Consultation Date:</strong></label>
+            <input type="date" id="birthday" name="birthday" className="p-2 border rounded-md w-full mb-4"></input>
 
             <button className="bg-blue-500 text-white px-4 py-2 rounded-md">Save and Record New Medical Record</button>
           </div>

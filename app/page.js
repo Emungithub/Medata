@@ -165,9 +165,62 @@ export default function Home() {
     }
   };
 
+  const [patientId, setPatientId] = useState('');
+  const [authCode, setAuthCode] = useState('');
+
+  const handleSearch = () => {
+    // Implement search functionality here
+    console.log(`Searching for Patient ID: ${patientId} with Auth Code: ${authCode}`);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center ">
-      
+       {/* //==========================Navigation========================== */}
+       <nav className="bg-white shadow-md w-full">
+            <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+                {/* Logo */}
+                <div className="flex items-center">
+                    <div className="rounded-full bg-purple-500 h-8 w-8 flex items-center justify-center mr-2">
+                        <span className="text-white text-lg font-bold">M</span>
+                    </div>
+                    <span className="text-xl font-semibold">Medata Doctor</span>
+                </div>
+
+                {/* Navigation Links */}
+                <ul className="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    
+                    <Link href="/">
+                      <li>Dashboard</li>
+                    </Link>
+
+                    <Link href="/doctor">
+                      <li>Patient Log</li>
+                    </Link>
+                    
+                    <Link href="/login">
+                      <li>Login As Patient</li>
+                    </Link>
+                </ul>
+
+                {/* Right Section */}
+                <div className="flex items-center space-x-4">
+                    <div className="relative">
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="border border-gray-300 rounded-full py-1 px-4 text-sm focus:outline-none"
+                        />
+                    </div>
+                    <div className="flex items-center">
+                      <Link href="/login">
+                        <span className="text-sm font-medium">Log Out</span>
+                      </Link>
+                    </div>
+                    <div className="md:hidden">
+                    </div>
+                </div>
+            </div>
+        </nav>  
 
       {/* //==========================Health Dashboard========================== */}
 
@@ -202,16 +255,6 @@ export default function Home() {
 
         {/* Financial Section */}
         <div className="col-span-1">
-        <Link href="/patient">
-          Go to Patient Page
-        </Link>
-
-        <Link href="/doctor">
-          Go to Doctor Page
-        </Link>
-        {/* todo  */}
-        
-
           <h3 className="text-lg font-semibold mb-4">Financial</h3>
           <div className="bg-gray-100 p-4 rounded-md mb-4">
             <p className="text-sm font-medium">Billing</p>
@@ -258,33 +301,44 @@ export default function Home() {
 
       <div className="col-span-1">
           <h3 className="text-lg font-semibold mb-4">Notifications</h3>
-          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md mb-4">
-            <p className="text-sm font-medium text-white">New patient data received</p>
-            <p className="text-sm text-white">Sandra Cook - 09:45, 22 Jan 2018</p>
-            <button className="text-blue-500 text-sm mt-1">View Details</button>
-          </div>
-          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md mb-4">
-            <p className="text-sm font-medium text-white">New patient data received</p>
-            <p className="text-sm text-white">Sandra Cook - 09:45, 22 Jan 2018</p>
-            <button className="text-blue-500 text-sm mt-1">View Details</button>
-          </div>
           <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md">
-            <p className="text-bg font-medium text-white">Patient revoking access</p><br></br>
+            <p className="text-bg font-medium text-white pb-2">New patient data received</p>
             <div style={{display: 'flex' }}>
               <div>
             <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Anon" alt="Annoymous Patient" className="w-10 h-10 rounded-full mr-4"/>
             </div>
             <div>
-                <p className="text-sm text-white">Herman Patterson - 09:30, 18 Dec 2017</p>
+                <p className="text-sm text-white">Lim Zi Xian - 15:30, 17 Aug 2024</p>
                 <button className="text-blue-500 text-sm mt-1">View Details</button>
               </div>
             </div>            
-          </div>
+          </div><br></br>
+          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md">
+            <p className="text-bg font-medium text-white pb-2">New patient data received</p>
+            <div style={{display: 'flex' }}>
+              <div>
+            <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Anon" alt="Annoymous Patient" className="w-10 h-10 rounded-full mr-4"/>
+            </div>
+            <div>
+                <p className="text-sm text-white">Leong Ee Mun - 09:30, 17 Aug 2024</p>
+                <button className="text-blue-500 text-sm mt-1">View Details</button>
+              </div>
+            </div>            
+          </div><br></br>
+          <div style={{ backgroundColor: '#45586a' }} className="bg-gray-100 p-4 rounded-md">
+            <p className="text-bg font-medium text-white pb-2">Patient revoking access</p>
+            <div style={{display: 'flex' }}>
+              <div>
+            <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Anon" alt="Annoymous Patient" className="w-10 h-10 rounded-full mr-4"/>
+            </div>
+            <div>
+                <p className="text-sm text-white">Bevvy - 09:30, 17 Aug 2024</p>
+                <button className="text-blue-500 text-sm mt-1">View Details</button>
+              </div>
+            </div>            
+          </div><br></br>
         </div>
     </div>    
-
-
-    
       {/* //========================================================================== */}
       
       <p className="text-sm text-gray-500 lowercase font-normal mt-4">
