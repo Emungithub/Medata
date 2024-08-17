@@ -6,6 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Link from 'next/link';
 
+import HealthConnectLogo from '../image/HealthConnect.png';
+
 
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -183,6 +185,9 @@ export default function Home() {
     <div className="min-h-screen mt-10 flex flex-col md:flex-row">
       {/* Left Side */}
       <div className="w-full md:w-1/2 bg-gradient-to-br from-purple-500 to-orange-400 flex items-center justify-center h-96 md:h-auto">
+        <div>
+        <img src={HealthConnectLogo} alt="HealthConnect Logo" className="w-20 h-auto" />           
+        </div>
         <div className="text-center p-8">
           <h1 className="text-6xl font-bold text-white mb-4">Medata</h1>
         </div>

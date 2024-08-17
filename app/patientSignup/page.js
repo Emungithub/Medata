@@ -254,7 +254,7 @@ export default function Home() {
               type="submit"
               className="w-full bg-purple-500 text-white p-3 rounded-lg hover:bg-purple-600 transition duration-300"
             >
-              Login
+              Sign Up
             </button>
             </Link>
           </form>

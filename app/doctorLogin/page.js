@@ -247,12 +247,14 @@ export default function Home() {
                 Forgot Password?
               </a>
             </div>
+            <Link href="/doctor" className="text-sm text-purple-500 hover:text-purple-700">
             <button
               type="submit"
               className="w-full bg-purple-500 text-white p-3 rounded-lg hover:bg-purple-600 transition duration-300"
             >
               Login
             </button>
+            </Link>
           </form>
           <div style={{justifyContent: 'space-between'}}className="flex">
                 <div className="mt-6 text-center">

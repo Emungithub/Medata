@@ -180,6 +180,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center ">   
     {/* // shadow-lg rounded-md */}
+    
     <nav className="bg-white shadow-md w-full">
             <div className="container mx-auto px-4 py-2 flex items-center justify-between">
                 {/* Logo */}
@@ -225,6 +226,8 @@ export default function Home() {
                 </div>
             </div>
         </nav>  
+
+    
     <div className="container mt-10 pl-10 pr-10 bg-white">
       {/* Personal Information Section */}  
       <div style={{borderStyle: 'solid', borderWidth: '1px', borderColor: 'gray'}} className="mb-6 rounded-md">
