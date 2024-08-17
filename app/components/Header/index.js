@@ -83,7 +83,9 @@ const Header = () => {
       <div className="container mx-auto px-8 lg:px-4 flex items-center justify-between">
         <div className="flex items-center">
           <h1 className="text-xl font-bold">Health Logo Here</h1>
+          
         </div>
+
         <button
           onClick={openModal}
           className="border rounded-md py-2 px-4 hover:bg-black hover:text-white transition-all duration-300"
@@ -101,6 +103,7 @@ const Header = () => {
             "Create Wallet"
           )}
         </button>
+        
       </div>
       <AnimatePresence>
         {isModalOpen && (
