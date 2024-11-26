@@ -1,4 +1,4 @@
-# This is a project template for APUBCC Devmatch 2024 Hackathon
+# Devmatch 2024 Hackathon
 
 The purpose of this template is to facilitate new developers to quickly get a hands-on approach and start developing using Maschain's API.  
 Test it out [HERE](https://maschainworkshop.vercel.app/)
